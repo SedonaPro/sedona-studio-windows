@@ -1,0 +1,5 @@
+import ru.bccontrol.sedonastudio.model.PollingInterval;
+public class PollingIntervalTests {
+ static void check(boolean b,String text){if(!b)throw new AssertionError(text);}
+ public static void main(String[] args){check(PollingInterval.parse("250")==250&&PollingInterval.parse("100")==100&&PollingInterval.parse("60000")==60000,"Valid milliseconds");for(String invalid:new String[]{"", "0","99","60001","-1","2.5","abc","999999999999"}){boolean rejected=false;try{PollingInterval.parse(invalid);}catch(IllegalArgumentException expected){rejected=true;}check(rejected,"Reject "+invalid);}check(PollingInterval.restore(250,10)==250,"New ms preference wins");check(PollingInterval.restore(-1,2)==2000,"Legacy seconds migrate");check(PollingInterval.restore(-1,Integer.MAX_VALUE)==1000,"No overflow in migration");check(PollingInterval.restore(0,-1)==1000,"Invalid settings use default");System.out.println("PASS millisecond intervals: 100..60000 validation, explicit ms preference, legacy seconds migration, invalid/overflow fallback");}
+}

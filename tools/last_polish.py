@@ -1,0 +1,12 @@
+from pathlib import Path
+r=Path('sedona-studio/src/main/java/ru/bccontrol/sedonastudio')
+f=r/'storage/ProjectStore.java';s=f.read_text(encoding='utf-8').replace('      nodes.add(\n          map(','''      Map<String,String> publicValues=new LinkedHashMap<>();
+      for(Map.Entry<String,String> value:n.values.entrySet())if(!ru.bccontrol.sedonastudio.model.SecretFields.matches(value.getKey()))publicValues.put(value.getKey(),value.getValue());
+      nodes.add(
+          map(''',1).replace('"x", n.x, "y", n.y, "ports", ports, "values", n.values','"x", n.x, "y", n.y, "ports", ports, "values", publicValues');f.write_text(s,encoding='utf-8')
+f=r/'ui/StudioApp.java';s=f.read_text(encoding='utf-8').replace('horizontal.setDividerPositions(.17, .78);','horizontal.setDividerPositions(prefs.getDouble("paletteWidth",.17),prefs.getDouble("inspectorWidth",.78));').replace('vertical.setDividerPositions(.76);','vertical.setDividerPositions(prefs.getDouble("trendHeight",.76));');s=s.replace('            polling.setSelected(false);\n            timer.shutdownNow();','''            prefs.putDouble("paletteWidth",horizontal.getDividerPositions()[0]);prefs.putDouble("inspectorWidth",horizontal.getDividerPositions()[1]);prefs.putDouble("trendHeight",vertical.getDividerPositions()[0]);
+            polling.setSelected(false);
+            timer.shutdownNow();''',1);s=s.replace('Arrays.asList("Arctic", "Sage", "Sand", "Lagoon")','Arrays.asList("Arctic", "Sage", "Sand", "Lagoon","Pearl","Copper","Blueprint","Original")');a=s.index('    String bg =',s.index('  private void applyTheme()'));b=s.index('    root.setStyle(',a);s=s[:a]+'''    Map<String,String> colors=new HashMap<>();colors.put("Arctic","#f3f6fa");colors.put("Sage","#f0f5ef");colors.put("Sand","#f8f4eb");colors.put("Lagoon","#edf7f5");colors.put("Pearl","#f8f7fa");colors.put("Copper","#faf5f2");colors.put("Blueprint","#f0f5fc");colors.put("Original","#fffbea");String bg=colors.getOrDefault(theme,"#f3f6fa");
+'''+s[b:];f.write_text(s,encoding='utf-8')
+f=Path('sedona-studio/tests/CoreTests.java');s=f.read_text(encoding='utf-8').replace(' System.out.println("PASS core', ''' Project secretProject=p.copy();secretProject.nodes.get("a").values.put("password","do-not-export");check(!ProjectStore.encode(secretProject).contains("do-not-export"),"Export never contains secret field values");
+ System.out.println("PASS core''');f.write_text(s,encoding='utf-8')

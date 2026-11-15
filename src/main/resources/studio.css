@@ -1,0 +1,13 @@
+.root { -fx-font-family: "Segoe UI"; -fx-font-size: 12px; -studio-sheet: #f3f6fa; -fx-base: #f4f6f8; -fx-accent: #387f99; }
+.tool-bar { -fx-padding: 10px; -fx-spacing: 6px; -fx-background-color: #25394b; }
+.tool-bar .button { -fx-background-color: #40596c; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 8px 12px; }
+.button { -fx-cursor: hand; -fx-background-radius: 4; }
+.sheet { -fx-background-color: -studio-sheet; -fx-background-image: url("grid.png"); }
+.block { -fx-background-color: white; -fx-border-color: #bbcbd5; -fx-border-radius: 7; -fx-background-radius: 7; -fx-effect: dropshadow(gaussian,rgba(37,57,75,.12),8,0,0,2); }
+.selected-block { -fx-border-color: #3f98b3; -fx-border-width: 1; }
+.block-title { -fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #25394b; }
+.block-type { -fx-font-size: 10px; -fx-text-fill: #7a8f9a; }
+.field-value { -fx-text-fill: #347c91; -fx-font-family: Consolas; }
+.list-cell { -fx-padding: 9px; -fx-font-size: 11px; }
+.status { -fx-padding: 8px 14px; -fx-background-color: #e0e9ed; -fx-text-fill: #29495a; }
+.chart { -fx-padding: 6px; } .chart-title { -fx-font-size: 12px; }

@@ -1,0 +1,2 @@
+import sedona.*;import sedona.offline.*;import java.nio.file.*;import ru.bccontrol.sedonastudio.storage.ManifestArchive;
+public class PrepareArchive {public static void main(String[] args)throws Exception{Path work=Paths.get(args[0]);Schema s=OfflineApp.decodeApp(work.resolve("app.sab").toFile()).schema;KitPart[] p=new KitPart[s.kits.length];for(int i=0;i<p.length;i++)p[i]=s.kits[i].manifest.part();Files.createDirectories(work.resolve("m"));Files.write(work.resolve("m/m.zip"),ManifestArchive.create(p));}}

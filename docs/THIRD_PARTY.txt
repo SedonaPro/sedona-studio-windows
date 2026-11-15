@@ -1,0 +1,4 @@
+Sedona Java library: sedona.jar, original vendor binary; Academic Free License 3.0. See SEDONA-LICENSE.html and provenance.json for the pinned artifact hash.
+Windows Java runtime: minimal OpenJDK 17 image created with jlink; upstream notices remain in runtime/legal. JavaFX: OpenJFX 17.0.12, GPLv2 with Classpath Exception; see OPENJFX-LICENSE.html and lib/javafx/dependencies.json for pinned public Maven artifacts. The previous Java8 bootstrap runtime is not shipped.
+Google Java Format 1.13.0: build tool only, Apache 2.0; original notices are inside its JAR. It is not required by the desktop application.
+The sedona.sox.SchemaParts class is a small package-level adapter for the existing Sedona request API, reused from our Java web project. No web server is included.

@@ -1,0 +1,76 @@
+**
+** Local test process: out approaches ambient + gain*command + disturbance.
+** A first-order thermal model, not a controller IO or a physical safety model.
+** Wire PID.out to command and out back to PID.pv to try a closed loop.
+** Time parameters are seconds. Command is clamped to 0..100.
+**
+class ThermalPlant extends Component
+{
+  property float command
+  @config property float ambient = 20.0f
+  @config property float disturbance
+  @config property bool reset
+  @config property float gain = 0.5f
+  @config property float tau = 20.0f
+  @config property float period = 0.1f
+  @config property float initial = 20.0f
+  @readonly property float out = 20.0f
+  @readonly property bool ok
+  private bool ready
+  private long lastTick
+
+  override virtual void execute()
+  {
+    long now = Sys.ticks()
+    if (!finite(period) || period < 0.01f || period > 10.0f)
+    {
+      step(0.0f)
+      lastTick = now
+      return
+    }
+    if (lastTick == 0L)
+    {
+      lastTick = now
+      step(period)
+      return
+    }
+    float dt = (float)(now - lastTick) / 1000000000.0f
+    if (dt < period) return
+    lastTick = now
+    step(dt)
+  }
+
+  void step(float dt)
+  {
+    ok := false
+    if (!finite(dt) || dt <= 0.0f || dt > 10.0f
+        || !finite(period) || period < 0.01f || period > 10.0f
+        || !finite(command) || !finite(ambient) || !finite(disturbance)
+        || !finite(gain) || !finite(tau) || tau < 0.0f || !finite(initial)) return
+    float input = command
+    if (input < 0.0f) input = 0.0f
+    if (input > 100.0f) input = 100.0f
+    float target = ambient + gain * input + disturbance
+    if (!finite(target)) return
+    ok := true
+    if (!ready || reset)
+    {
+      out := initial
+      ready = true
+      if (reset) return
+    }
+    // Implicit Euler: stable for every positive dt and tau; tau=0 is instantaneous.
+    float next = out + dt / (tau + dt) * (target - out)
+    if (!finite(next))
+    {
+      ok := false
+      return
+    }
+    out := next
+  }
+
+  private static bool finite(float value)
+  {
+    return value == value && value < 3.4e38f && value > -3.4e38f
+  }
+}

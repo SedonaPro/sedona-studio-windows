@@ -1,0 +1,10 @@
+{
+  "part": "mcsMath-e022af09",
+  "assertions": 52,
+  "failures": 0,
+  "liveLoopback": true,
+  "physicalDevicesTouched": false,
+  "oldGainModified": false,
+  "testFolder": "G:\\SedonaStudio-Windows\\build\\mcs-pid-20261114-221527",
+  "created": "2026-11-14T22:20:01.334661+03:00"
+}

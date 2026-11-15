@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path('sedona-studio/build.py');s=p.read_text(encoding='utf-8').replace("cp=os.pathsep.join([str(r/'lib/sedona.jar'),str(jfx)])","jfx_files=sorted(jfx.parent.glob('*.jar')) if jfx.name=='*' else [jfx]\nif not jfx_files:raise RuntimeError('JavaFX libraries missing; run link_runtime.py or set JAVAFX_JAR')\ncp=os.pathsep.join([str(r/'lib/sedona.jar')]+[str(p) for p in jfx_files])");p.write_text(s,encoding='utf-8')

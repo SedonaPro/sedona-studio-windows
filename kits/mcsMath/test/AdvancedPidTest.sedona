@@ -1,0 +1,172 @@
+class AdvancedPidTest extends Test
+{
+  static inline AdvancedPid p
+
+  static void defaults()
+  {
+    p.enabled := true
+    p.manual := false
+    p.reset := true
+    p.sp := 0.0f
+    p.pv := 0.0f
+    p.manualOut := 0.0f
+    p.feedforward := 0.0f
+    p.kp := 1.0f
+    p.ti := 0.0f
+    p.td := 0.0f
+    p.filterTime := 0.0f
+    p.period := 0.1f
+    p.outMin := -1000.0f
+    p.outMax := 1000.0f
+    p.slewRate := 0.0f
+    p.safeOut := 0.0f
+    p.reverse := false
+    p.step(0.1f)
+    p.reset := false
+  }
+
+  static bool near(float a, float b)
+  {
+    float d = a - b
+    return d < 0.001f && d > -0.001f
+  }
+
+  static void test()
+  {
+    defaults()
+    p.kp := 2.0f
+    p.sp := 10.0f
+    p.pv := 7.0f
+    p.step(0.1f)
+    assert(p.ok)
+    assert(near(p.out, 6.0f))
+    p.reverse := true
+    p.step(0.1f)
+    assert(near(p.out, -6.0f))
+
+    defaults()
+    p.sp := 10.0f
+    p.ti := 2.0f
+    p.step(0.5f)
+    assert(near(p.iTerm, 2.5f))
+    assert(near(p.out, 12.5f))
+    p.step(0.5f)
+    assert(near(p.out, 15.0f))
+
+    defaults()
+    p.kp := 2.0f
+    p.ti := 1.0f
+    p.sp := 100.0f
+    p.outMax := 10.0f
+    for (int i=0; i<50; ++i) p.step(0.1f)
+    assert(near(p.out, 10.0f))
+    assert(p.limited)
+    assert(near(p.iTerm, 0.0f))
+    p.sp := 0.0f
+    p.step(0.1f)
+    assert(near(p.out, 0.0f))
+
+    defaults()
+    p.sp := 10.0f
+    p.kp := 2.0f
+    p.ti := 2.0f
+    p.manual := true
+    p.manualOut := 42.0f
+    p.step(0.1f)
+    assert(near(p.out, 42.0f))
+    assert(near(p.iTerm, 22.0f))
+    p.manual := false
+    p.step(0.1f)
+    assert(near(p.out, 42.0f))
+    p.step(0.1f)
+    assert(near(p.out, 43.0f))
+    p.manual := true
+    p.manualOut := 2000.0f
+    p.step(0.1f)
+    assert(near(p.out, 1000.0f) && p.limited)
+
+    defaults()
+    p.kp := 2.0f
+    p.td := 1.0f
+    p.sp := 10.0f
+    p.pv := 10.0f
+    p.step(0.1f)
+    assert(near(p.dTerm, 0.0f))
+    p.pv := 11.0f
+    p.step(0.1f)
+    assert(near(p.dTerm, -20.0f))
+    assert(near(p.out, -22.0f))
+    p.sp := 20.0f
+    p.step(0.1f)
+    assert(near(p.dTerm, 0.0f))
+    assert(near(p.out, 18.0f))
+
+    defaults()
+    p.td := 1.0f
+    p.filterTime := 0.9f
+    p.step(0.1f)
+    p.pv := 1.0f
+    p.step(0.1f)
+    assert(near(p.dTerm, -1.0f))
+
+    defaults()
+    p.sp := 1.0f
+    p.ti := 1.0f
+    p.step(0.2f)
+    assert(near(p.out, 1.2f))
+    p.step(0.3f)
+    assert(near(p.out, 1.5f))
+
+    defaults()
+    p.sp := 100.0f
+    p.ti := 1.0f
+    p.slewRate := 5.0f
+    p.step(0.2f)
+    assert(near(p.out, 1.0f))
+    assert(p.limited && near(p.iTerm, 0.0f))
+    p.step(0.2f)
+    assert(near(p.out, 2.0f))
+
+    defaults()
+    p.safeOut := 7.0f
+    p.enabled := false
+    p.step(0.1f)
+    assert(p.ok && near(p.out, 7.0f))
+    p.enabled := true
+    p.reset := true
+    p.step(0.1f)
+    assert(near(p.out, 7.0f) && near(p.iTerm, 0.0f))
+    p.reset := false
+    p.step(0.0f)
+    assert(!p.ok && near(p.out, 7.0f))
+    p.step(0.1f)
+    assert(p.ok && near(p.out, 0.0f))
+    p.kp := -1.0f
+    p.step(0.1f)
+    assert(!p.ok && near(p.out, 7.0f))
+    p.kp := 1.0f
+    p.outMin := 20.0f
+    p.outMax := 10.0f
+    p.step(0.1f)
+    assert(!p.ok && near(p.out, 7.0f))
+    defaults()
+    p.safeOut := 7.0f
+    p.kp := 1.0e30f
+    p.sp := 1.0e30f
+    p.step(0.1f)
+    assert(!p.ok && near(p.out, 7.0f))
+    defaults()
+    p.period := 0.0f
+    p.step(0.1f)
+    assert(!p.ok)
+    defaults()
+    float zero = p.pv
+    p.sp := zero / zero
+    p.step(0.1f)
+    assert(!p.ok)
+    defaults()
+    p.feedforward := 12.0f
+    p.step(0.1f)
+    assert(near(p.out, 12.0f))
+  }
+}

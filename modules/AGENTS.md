@@ -1,0 +1,2 @@
+# Internal panel modules
+These are modules of the single G:\SedonaStudio-Windows project, not separate projects. Use root build.py / test.py. Public API major 1 is the only dependency on the host. Widget and demo code must not import editor/Sedona/MCS classes or access SOX directly. Preserve DTO and document compatibility. Commands to a real controller remain disabled in the host adapter until separately implemented.

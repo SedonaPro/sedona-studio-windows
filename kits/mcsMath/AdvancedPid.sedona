@@ -1,0 +1,183 @@
+**
+** PID with measured elapsed time, derivative on measurement, anti-windup,
+** manual tracking and optional output slew limit. Time parameters are seconds.
+** Positive error raises output; reverse=true reverses the control direction.
+** Ti=0 disables integral; Td=0 disables derivative; slewRate=0 disables slew.
+** reset is level-sensitive and holds safeOut. No extra native ABI is required.
+** This component does not choose tuning parameters or replace plant interlocks.
+**
+class AdvancedPid extends Component
+{
+  @config property float sp
+  property float pv
+  @config property bool enabled = true
+  @config property bool manual
+  @config property bool reset
+  @config property float manualOut
+  @config property float feedforward
+  @config property float kp = 1.0f
+  @config property float ti = 10.0f
+  @config property float td
+  @config property float filterTime = 0.2f
+  @config property float period = 0.1f
+  @config property float outMin
+  @config property float outMax = 100.0f
+  @config property float slewRate
+  @config property float safeOut
+  @config property bool reverse
+  @readonly property float out
+  @readonly property float error
+  @readonly property float pTerm
+  @readonly property float iTerm
+  @readonly property float dTerm
+  @readonly property bool limited
+  @readonly property bool ok
+
+  private float integral
+  private float previousPv
+  private float filteredRate
+  private bool ready
+  private bool wasManual
+  private long lastTick
+
+  override virtual void execute()
+  {
+    long now = Sys.ticks()
+    if (!finite(period) || period < 0.01f || period > 10.0f)
+    {
+      step(0.0f)
+      lastTick = now
+      return
+    }
+    if (lastTick == 0L)
+    {
+      lastTick = now
+      step(period)
+      return
+    }
+    float elapsed = (float)(now - lastTick) / 1000000000.0f
+    if (elapsed < period) return
+    lastTick = now
+    step(elapsed)
+  }
+
+  ** One deterministic control sample; execute supplies real elapsed time.
+  void step(float dt)
+  {
+    ok := false
+    limited := false
+    if (!finite(dt) || dt <= 0.0f || dt > 10.0f
+        || !finite(period) || period < 0.01f || period > 10.0f
+        || !finite(sp) || !finite(pv) || !finite(manualOut) || !finite(feedforward)
+        || !finite(kp) || kp < 0.0f || !finite(ti) || ti < 0.0f
+        || !finite(td) || td < 0.0f || !finite(filterTime) || filterTime < 0.0f
+        || !finite(outMin) || !finite(outMax) || outMin >= outMax
+        || !finite(slewRate) || slewRate < 0.0f || !finite(safeOut))
+    {
+      fallback()
+      return
+    }
+    ok := true
+    if (!enabled || reset)
+    {
+      fallback()
+      return
+    }
+    error := reverse ? pv - sp : sp - pv
+    pTerm := kp * error
+    if (!ready)
+    {
+      previousPv = pv
+      filteredRate = 0.0f
+      integral = 0.0f
+      ready = true
+    }
+    float rate = (pv - previousPv) / dt
+    previousPv = pv
+    filteredRate += dt / (filterTime + dt) * (rate - filteredRate)
+    dTerm := (reverse ? 1.0f : -1.0f) * kp * td * filteredRate
+    if (!finite(error) || !finite(pTerm) || !finite(dTerm) || !finite(filteredRate))
+    {
+      ok := false
+      fallback()
+      return
+    }
+    if (manual)
+    {
+      float tracked = clip(manualOut, outMin, outMax)
+      integral = tracked - pTerm - dTerm - feedforward
+      if (!finite(integral))
+      {
+        ok := false
+        fallback()
+        return
+      }
+      iTerm := integral
+      out := tracked
+      limited := tracked != manualOut
+      wasManual = true
+      return
+    }
+    float lower = outMin
+    float upper = outMax
+    if (slewRate > 0.0f)
+    {
+      lower = clip(out - slewRate * dt, outMin, outMax)
+      upper = clip(out + slewRate * dt, outMin, outMax)
+    }
+    // The first automatic sample retains the tracked manual output.
+    float delta = ti > 0.0f && !wasManual ? kp * error * dt / ti : 0.0f
+    float candidate = integral + delta
+    float raw = pTerm + candidate + dTerm + feedforward
+    if (!finite(candidate) || !finite(raw))
+    {
+      ok := false
+      fallback()
+      return
+    }
+    // Reject only an integral step that drives farther into a limit.
+    if ((delta > 0.0f && raw > upper) || (delta < 0.0f && raw < lower))
+    {
+      raw = pTerm + integral + dTerm + feedforward
+    }
+    else integral = candidate
+    if (!finite(raw))
+    {
+      ok := false
+      fallback()
+      return
+    }
+    iTerm := integral
+    out := clip(raw, lower, upper)
+    limited := out != raw
+    wasManual = false
+  }
+
+  private void fallback()
+  {
+    float value = finite(safeOut) ? safeOut : 0.0f
+    if (finite(outMin) && finite(outMax) && outMin < outMax)
+      value = clip(value, outMin, outMax)
+    out := value
+    error := 0.0f
+    pTerm := 0.0f
+    iTerm := 0.0f
+    dTerm := 0.0f
+    integral = 0.0f
+    filteredRate = 0.0f
+    ready = false
+    wasManual = false
+  }
+
+  private static bool finite(float value)
+  {
+    return value == value && value < 3.4e38f && value > -3.4e38f
+  }
+
+  private static float clip(float value, float lo, float hi)
+  {
+    if (value < lo) return lo
+    if (value > hi) return hi
+    return value
+  }
+}

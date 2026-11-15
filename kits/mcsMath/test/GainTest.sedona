@@ -1,0 +1,21 @@
+class GainTest extends Test
+{
+  static inline Gain g
+
+  static void test()
+  {
+    g.in := 2.0f
+    g.gain := 3.0f
+    g.execute()
+    assert(g.out == 6.0f)
+
+    g.hi := 5.0f
+    g.execute()
+    assert(g.out == 5.0f)
+
+    g.in := -2000.0f
+    g.gain := 1.0f
+    g.execute()
+    assert(g.out == -1000.0f)
+  }
+}

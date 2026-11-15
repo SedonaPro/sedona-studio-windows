@@ -1,0 +1,13 @@
+<sedonaKit
+ name = "mcsMath"
+ vendor = "Mcs"
+ description = "TODO: one line about the kit"
+ includeSource = "false"
+ doc = "true"
+>
+  <depend on="sys 1.2+" />
+
+  <source dir="." />
+  <source dir="test" testonly="true" />
+  <native qname="mcsMath::Gain.clamp" id="16::0"/>
+</sedonaKit>

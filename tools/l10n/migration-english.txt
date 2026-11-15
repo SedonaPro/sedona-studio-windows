@@ -1,0 +1,487 @@
+1|catalog.manifestMissing|The session has no {0}. Connect to the controller to download it.
+2|catalog.noSys|no sys
+3|catalog.versionConflict|version conflict {0}
+4|catalog.unsuitable|{0} does not fit
+5|catalog.noDependency|missing dependency {0}
+6|manifest.missingInSession|The current session has no manifest: {0}
+7|template.req.severalVersions|Several versions of kit {0}
+8|template.req.noSourceKit|Source kit {0} is missing
+9|template.req.verified|Dependencies verified against local manifests: {0} kits.
+10|template.req.fullSetKept|The full source kit set was kept: dependencies not confirmed ({0}).
+11|template.req.noSourceDependency|Source dependency {0} is missing
+12|template.req.noLocalManifest|No local manifest {0}
+13|template.req.dtd|DTD/entity in {0}
+14|template.req.checksum|Checksum mismatch: {0}
+15|template.req.dependencyUnsuitable|Dependency {0} does not fit
+16|session.local|local
+17|session.id|Session ID
+18|session.localLibrary|Local library
+19|session.cannotRemove|The local library and the current session cannot be removed
+20|session.badPath|Invalid session path
+21|session.openElsewhere|The session is open in another window. Close it before removing.
+22|session.openNow|The session is open now
+23|session.badArchiveFolder|Invalid archive folder
+24|session.folder|Folder: {0}\n\n
+25|session.noSchemaYet|The controller schema has not been received yet. Connect in this session.\n
+26|session.xmlInCache|\nXML files in its own cache: 
+27|session.nameLength|Session name: 1–120 characters
+28|session.udpPort|UDP port
+29|session.badConfirmation|Invalid connection confirmation
+30|session.badRequest|Invalid connection request
+31|session.confirmationExpired|The connection confirmation has expired. Press Connect again.
+32|session.alreadyClosed|The session is already closed
+33|session.oldVersion|The session was opened by an older version. Close it in its own window.
+34|session.passwordTooLong|The password is too long
+35|session.dpapiTimeout|DPAPI: timed out
+36|session.dpapiFailed|DPAPI: could not process the password of the current Windows user
+37|session.keyDamaged|The password protection key is damaged: {0}
+38|session.passwordDamaged|The saved password is damaged
+39|session.passwordFailed|Could not process the saved password
+40|workspace.badRequestSize|Invalid request size or name
+41|workspace.badAction|Invalid action
+42|workspace.badRequestSaved|The invalid request was saved: {0}
+43|recovery.cannotRead|Could not read
+44|recovery.snapshotDamaged|\nThe result snapshot is damaged: {0}
+45|recovery.verified|Verified by readback
+46|recovery.checkRequired|Device check required
+47|recovery.notStarted|Writing was not started according to the journal
+48|recovery.summary|State: {0}\nAttempts: {1} · confirmed steps: {2}\n{3}\n{4}\n{5}
+49|recovery.lastStep|Last step without DONE: {0}\n
+50|recovery.journalUnavailable|The journal is unavailable or larger than 1 MiB
+51|view.damaged|The view settings are damaged
+52|store.string|String: {0}
+53|store.list|List: {0}
+54|store.tooLarge|The project is larger than 4 MiB
+55|store.unknownFormat|Unknown project format
+56|store.noteTooLong|The comment is longer than 4000 characters
+57|store.duplicatePort|Duplicate port
+58|store.tooManyFields|Too many fields
+59|store.noSecrets|Secrets are not stored in the project
+60|store.badFieldValue|Invalid field value
+61|store.duplicateId|Duplicate ID
+62|store.bendPoint|Bend point
+63|store.draftUnavailable|The draft and its backup are unavailable; the existing files were kept as .damaged-*
+64|catalog.none|No catalog
+65|template.counts| · blocks: {0} / links: {1}
+66|template.damaged| · damaged
+67|template.nameLength|Name: 1–120 characters
+68|template.selectBlocks|Select blocks for the template
+69|template.systemComponent|A system component cannot be part of a template: {0}
+70|template.wrongExactKit|Wrong exact kit: {0}
+71|template.noExactKit|The component has no exact kit: {0}
+72|template.outsideLibrary|The file is outside the library
+73|edit.noTargetFolder|Target folder not found
+74|edit.incompatibleKit|Incompatible versions of kit {0}
+75|edit.pasteOutOfRange|The pasted blocks would leave the 0…3060 area
+76|edit.coordsOutOfRange|Coordinates outside 0…3060
+77|edit.ownSubtree|Cannot move into its own subtree
+78|edit.noFolder|No such folder
+79|polling.interval|Interval: a whole number from 100 to 60000 ms
+80|project.new|New project
+81|project.blockNotFound|Block not found
+82|project.incompatiblePorts|Incompatible ports
+83|project.inputConnected|The input is already connected
+84|project.cannotRemoveRoot|The root cannot be removed
+85|project.blockLimit|Limit of 512 blocks
+86|project.bendLimit|No more than 64 bend points
+87|project.badBend|Invalid link point
+88|project.badName|Invalid name: {0}
+89|project.coordinates|Coordinates: {0}
+90|project.duplicateName|Duplicate name: {0}
+91|project.noParent|No parent: {0}
+92|project.folderCycle|Folder cycle: {0}
+93|project.brokenLink|Broken link: {0}
+94|project.duplicateLink|Duplicate link
+95|project.severalSources|Several sources on one input
+96|diff.removal|Removal
+97|diff.link|Link
+98|diff.addition|Addition
+99|diff.inFolder|{0} · folder {1}
+100|diff.name|{0} · name
+101|diff.type|{0} · type
+102|diff.kit|{0} · kit
+103|diff.folder|{0} · folder
+104|diff.position|{0} · position
+105|diff.change|Change
+106|template.noRootBlocks|The template has no root blocks
+107|template.noRoom|No free room for the group. Clear an area or insert the template into another folder.
+108|device.disconnectFirst|Disconnect first
+109|device.addressPort|Address/port
+110|device.archiveTooLarge|The archive is larger than 8 MiB
+111|device.notConnected|No connection to the device
+112|device.schemaChanged|The schema has changed; reconnect
+113|device.defaultName|Sedona device
+114|device.readLimit|Read limit of 512 blocks
+115|device.noComponent|No such component
+116|device.plan.removeLink|Remove link {0}
+117|device.plan.create|Create {0} : {1}
+118|device.plan.retypeUnsupported|Moving an existing block to another type is not supported
+119|device.plan.rename|Name {0} → {1}
+120|device.plan.position|Position {0}
+121|device.plan.field|Field {0}.{1} = {2}
+122|device.plan.addLink|Add link {0}
+123|device.plan.removeBlock|Remove block {0}
+124|device.noExactType|No exact type {0} / {1}
+125|device.credentialsUnsupported|Changing blocks that hold credentials is not supported
+126|device.positionOutOfRange|Position outside the Sedona range 0…3060
+127|device.noLinkBlock|The link's block is missing
+128|device.linksChanged|Links on the device have changed; read the device again
+129|device.outcomeUnknown|The outcome of the previous write is unknown; read the device again
+130|device.rootName|This editor does not change the root name
+131|device.nameTaken|The name is still taken on the device: {0}. Rename or remove the old block in a separate apply.
+132|device.setChanged|The set of blocks on the device has changed
+133|device.blockChanged|The block has changed: {0}
+134|device.inputLinked|The input is driven by a link; remove it first: {0}.{1}
+135|device.valueChanged|The value has changed: {0}.{1}
+136|device.badLink|Invalid link
+137|device.systemRemoval|Removing a system component is not allowed in this version
+138|device.readbackNewBlock|Readback of the new block
+139|device.newBlockParent|The parent of the new block is missing
+140|device.readbackName|Readback of the name
+141|device.positionChanged|The position has changed
+142|device.readbackPosition|Readback of the position
+143|device.valueChangedBeforeWrite|The value changed before writing
+144|device.readbackValue|Readback of the value
+145|device.folderNotEmpty|The folder being removed still has child blocks
+146|device.interrupted|The operation was interrupted; some changes may have been applied. There is no automatic retry. Journal: {0}
+147|device.linksDiffer|The resulting links differ from the plan
+148|device.blockDiffers|The resulting block differs from the plan
+149|device.groupsDiffer|Access groups of the new block differ from the plan: {0}
+150|device.valueDiffers|The resulting value differs from the plan: {0}.{1}
+151|device.stillExists|The removed block still exists
+152|value.noText|The text is missing
+153|value.asciiOnly|Sedona: only ASCII without the null character is allowed
+154|value.maxLength|At most {0} characters
+155|live.fresh|Fresh
+156|live.stale|Stale
+157|live.changed|Changed
+159|selftest.closingSession|Checking that the background session closes…
+160|selftest.editorError|Test: an editor error must not stop polling
+161|value.label|Value: {0}
+162|notice.error|Error: {0}
+163|notice.notCompleted|The operation was not completed
+164|live.onlineValues|Online values
+165|live.onlineValuesTip|Visible components, the selected block and trends. Up to 16 blocks per cycle; the interval is set in ms, large views are polled in turns.
+166|live.offline|Offline
+167|live.stateTip|Click: resume/pause polling or open the settings
+168|live.refreshNow|Refresh now / resume
+169|live.pause|Pause
+170|live.refreshSettings|Refresh settings…
+171|live.connectFirst|Connect to the device first
+172|live.reading|Reading values…
+173|live.paused|Polling paused
+174|live.axisSeconds|Seconds since the editor started
+175|live.chartTitle|Selected signals / UI samples
+176|live.removeSignal|Remove signal…
+177|live.clearTrends|Clear trends
+178|live.chooseSignal|Choose the signal to remove
+179|live.waiting|Waiting for values…
+180|live.q.local|Project — local component
+181|live.q.pending|Changed locally — not applied yet
+182|live.q.offline|Offline — last value read
+183|live.q.readError|Read error — last data: {0}
+184|live.q.age|{0} data · {1} ago
+185|live.ms|{0} ms
+186|live.seconds|{0} s
+187|live.maxSignals|At most 8 signals
+188|live.numericOnly|Only numeric / Boolean signals
+189|live.signalAdded|Signal added; turn polling on to read it from the device
+190|live.cycleError|Refresh cycle error: {0}
+191|live.offlineCached|OFFLINE — the screen shows the last cached values; reconnect manually
+192|live.readingFor|Reading… · {0} s
+193|live.readDevice|Read the device to refresh the values
+194|live.noVisible|No visible device blocks · select a block
+195|live.retrying|Retrying the read · up to 10 s · click to manage
+196|live.blockReadError|Read error in block #{0}: {1}; other blocks keep refreshing
+197|live.cache|Cache: {0}
+198|live.readErrorRetry|Read error · retry within 10 s · click to manage
+199|live.online|Online · {0} · {1} blocks{2}
+200|live.errorCount| · errors: {0}
+201|live.addSignals|Add signals to the trend
+202|live.csvSaved|CSV saved: {0}
+203|apply.wholePlan|Apply the whole plan
+204|recovery.required|required
+205|manifests.title|Project manifests / exact name-checksum
+206|manifests.exportZip|Export ZIP
+207|manifests.importXmlZip|Import XML / ZIP
+208|manifests.download|Download from the controller
+209|manifests.autoHint|Missing manifests are downloaded automatically on connect.
+210|manifests.connectFirst|Connect to the controller in this session first
+211|manifests.downloading|Downloading manifests from the controller…
+212|manifests.downloaded|Exact manifests downloaded into the current session: {0}
+213|manifests.exporting|Exporting manifests…
+214|manifests.exported|Manifests exported: {0}
+215|manifests.fileType|Manifests
+216|manifests.importing|Importing manifests…
+217|manifests.imported|Manifests imported: {0}
+218|manifests.deviceSchemaKept|The device palette keeps the device's exact schema; new versions become available after reconnecting.
+219|notice.busy|The previous operation is still running
+220|files.unsaved|There are unsaved changes. Continue without saving?
+221|files.paletteLocked|While connected, the palette is limited to the device's exact schema. Disconnect to use the local catalog.
+222|files.readingManifests|Reading local manifests…
+223|files.localPalette|Local palette: {0} components; unavailable sets: {1}
+224|files.manifest|Manifest: {0}
+225|files.demoName|Example: sum of signals
+226|files.disconnectFirst|Disconnect from the device first
+227|files.draftKitsDiffer|The draft must have been read from a device with the same exact kits
+228|files.opened|Opened {0}
+229|files.projectType|Sedona Studio project
+230|files.saved|Project saved: {0}
+231|review.showSnapshotValues|Show values from the snapshots
+232|review.syncScroll|Synchronised scrolling
+233|review.dimUnchanged|Dim unchanged blocks
+234|review.showSavedValues|Show saved values
+235|review.before|Before · last snapshot read
+236|review.after|After · project being confirmed
+237|project.root|Root
+238|review.fitTemplate|Fit template
+239|review.fitBoth|Fit both diagrams
+240|review.viewOptions|View options
+241|review.compareOptions|Comparison options
+242|review.folder|Folder
+243|review.legendCompare|+ green — added     − red — removed     Δ amber — changed\nSnapshot view: no editing and no requests to the device.
+244|review.legendTemplate|Template view: folders, blocks and internal links. Editing and connecting are disabled.\nValues are those saved in the template; nothing is computed or polled.
+245|review.cannotShow|Could not show the snapshot
+246|inspector.componentMissing|{0}: the component is missing
+247|inspector.endpoint|{0}: {1}.{2} [#{3}]\n{4} · {5}\nValue: {6}\n{7}
+248|inspector.unknownType|unknown type
+249|inspector.source|Source
+250|inspector.target|Target
+158|selftest.apiCopy|a copy of the API
+251|inspector.componentNotFound|Component not found
+252|inspector.toSource|To source
+253|inspector.toTarget|To target
+254|inspector.separateReads|The values are read separately and may belong to different moments.
+255|inspector.linkDiagnostics|Link diagnostics
+256|inspector.removeLink|Remove link
+257|inspector.selectedCount|Selected: {0} components
+258|inspector.copy|Copy
+259|inspector.duplicateWithLinks|Duplicate with links
+260|inspector.removeSelected|Remove selected
+261|inspector.moveToFolder|Move to folder…
+262|inspector.hint|Select a block.\n\nDouble-click in the palette — add.\nOutput on the right → input on the left — link.\nDrag the body — move.\nCtrl+Z / Ctrl+Y — history.\nCtrl+D — duplicate.\nDelete — remove.\nCtrl+wheel — zoom.\nMiddle button — pan.\nHome — fit, F1 — help.
+263|inspector.blockTitle|BLOCK #{0}
+264|inspector.name|Name
+265|inspector.rename|Rename
+266|inspector.note|Block comment / named section
+267|inspector.saveNote|Save comment
+268|inspector.projectValue|Project: 
+269|inspector.cacheValue|Cache: 
+270|inspector.change|Change
+271|inspector.toTrend|To trend
+272|diagram.linkAdded|Link added to the project
+273|changes.noneForFilter|No changes match the selected filter
+274|changes.searchPrompt|Search by block, field, link or value…
+275|changes.all|All changes
+276|changes.reset|Reset
+277|changes.filterHint|The filter only changes the list. Applying runs the whole confirmed plan.
+278|changes.counts|Shown {0} of {1} · added {2} · changed {3} · removed {4}
+279|changes.item|{0} · {1}\nBefore: {2}\nAfter: {3}
+280|palette.searchPrompt|Find a block…
+281|sessions.title|Sessions · independent projects and manifests
+282|sessions.hint|Choose a session. Without the checkbox the tab is switched; the connection and the draft are kept.\nPasswords are encrypted with DPAPI; simply opening a session does not connect to the device.
+283|sessions.new|New session…
+284|sessions.name|Session name
+285|sessions.remove|Remove
+286|sessions.removeConfirm|Remove session “{0}” from the list?\nThe project, password and manifests will be moved to deleted-sessions for recovery.
+287|sessions.moved|The session was moved to {0}
+288|sessions.manifests|Session manifests
+289|sessions.manifestsOf|Manifests · {0}
+290|sessions.manifestsHint|Each session keeps its own files. To download them, open the session, connect and choose\nManifests → Download from the controller. Missing files are downloaded on connect.
+291|sessions.openFolder|Open folder
+292|sessions.storageFolder|Storage folder of the sessions / of the selected session
+293|connect.already|Already connected
+294|connect.title|Sedona / SOX connection
+295|connect.savePassword|Save the password (DPAPI of the current Windows user)
+296|connect.passwordUnavailable|The saved password is unavailable; enter it again
+297|connect.address|Address
+298|connect.user|User
+299|connect.password|Password
+300|connect.chooseSession|Choose an existing session of this device
+301|connect.handedOver|The confirmed connection was handed over to the device session window.
+302|connect.connecting|Connecting and fetching manifests…
+303|connect.connected|Connected · {0} · {1} components · {2} kits
+304|connect.byRequest|Connecting by the confirmed request; reading the program and manifests…
+305|connect.testLoopbackOnly|Test only on loopback13987
+306|view.notSaved|View not saved: {0}
+307|connect.none|Not connected
+308|connect.reading|Reading the device…
+309|connect.read|Diagram read
+310|connect.waitForOperation|Wait for the operation to finish
+311|connect.disconnecting|Disconnecting…
+312|connect.disconnected|Disconnected; the project stays local
+313|templates.title|Template library
+314|templates.empty|No templates. Select blocks and save them to the library.
+315|templates.searchPrompt|Find a template…
+316|templates.insertHint|Inserting changes the local project; writing to the device is a separate step via “Apply”.
+317|templates.saveSelection|Save selection…
+318|templates.insert|Insert
+319|templates.preview|Preview…
+320|templates.rename|Rename…
+321|templates.import|Import…
+322|templates.export|Export…
+323|templates.details|{0}\n{1}\nExact kits for inserting:\n{2}
+324|templates.previewTitle|Template preview · {0}
+325|templates.renameTitle|Rename template
+326|templates.renameHint|Only the name in the library changes.
+327|templates.renamed|Template renamed. The previous version was kept as .bak.
+328|templates.defaultName|My template
+329|templates.saveTitle|Save the selected blocks
+330|templates.saveHint|Folders and internal links are included; external links are not saved.
+331|templates.saved|Template saved. {0}
+332|templates.imported|Imported into the library; the session manifests were not changed.
+333|templates.exported|Exported: {0}
+334|templates.archived|Moved to the archive: {0}
+335|templates.libraryFolder|Library folder: {0}
+336|templates.fileType|Sedona Studio template
+337|common.project|Project
+338|diagram.wireCancelled|Link cancelled: release the mouse over a component input
+339|diagram.outputTip|{0} · {1}\nDrag a link to an input
+340|diagram.inputTip|\nLink input
+341|diagram.inputUnavailable|\nNot available for an incoming link
+342|diagram.chooseInput|Choose an input for {0}.{1}
+343|diagram.duplicate|Duplicate
+344|diagram.noRoute|\nNo free path: the link is shown by its ends
+345|diagram.autoRoute|Restore auto-routing
+346|diagram.goToSource|Go to source
+347|diagram.goToTarget|Go to target
+348|panel.properties|Properties
+349|panel.tab|Panel
+350|apply.readFirst|Read the device first
+351|apply.noChanges|No device changes
+352|apply.applying|Applying; journal: {0}
+353|apply.readBack|Changes read back · {0}
+354|apply.readFirstToCompare|Read the device first: comparing needs the original snapshot
+355|apply.planUnavailable|The write plan is unavailable: {0}
+356|apply.title|Applying changes / {0} operations
+357|apply.compareTitle|Comparison with the last read · no writing
+358|apply.callSave|Call App.save after a successful apply
+359|apply.warning|Changes are applied one after another. If the connection drops, the result may be partial.\nA local copy and the journal are saved before writing. There is no automatic retry.
+360|apply.tabDiagrams|Diagrams
+361|apply.tabBeforeAfter|Before → after
+362|apply.tabPlan|Operation plan
+363|apply.compareHint|Comparison with the last device read. A fresh check runs before writing.\nNotes, line bends and current online values are not part of the write list.
+364|recovery.title|Operation journal / check after a failure
+365|recovery.empty|This session has not written to the device yet.
+366|recovery.hint|After a failure: 1. Keep the journal. 2. Read the device again. 3. Compare the result with the original and the requested projects.\nThe old plan must not be repeated automatically: some steps may have run. Open the copies for analysis.
+367|recovery.originalRequested|Original → requested
+368|recovery.openFolder|Open the operation folder
+369|recovery.refresh|Refresh the list
+370|recovery.historic|Historic plan. It is not a command to write again.
+371|recovery.snapshotsUnavailable|The operation snapshots are unavailable: {0}
+372|recovery.rereadDevice|Read the device again
+373|recovery.journals|Journals of this session: {0}
+374|recovery.draftSaved|The draft was saved before re-reading: {0}
+375|toolbar.pinLayout|Pin layout
+376|toolbar.pinLayoutTip|Write the on-screen coordinates into the project for the current folder · Ctrl+Z undoes · nothing is sent to the device
+377|toolbar.undoTip|Undo · Ctrl+Z
+378|toolbar.redoTip|Redo · Ctrl+Y
+379|toolbar.helpTip|Controls and hotkeys · F1
+380|app.statusOffline|OFFLINE · the diagram is not running · Sedona Studio / JavaFX
+381|toolbar.open|Open…
+382|toolbar.save|Save
+383|toolbar.connect|Connect…
+384|toolbar.read|Read
+385|toolbar.apply|Apply…
+386|toolbar.sessions|Sessions
+387|toolbar.zoom|Zoom
+388|toolbar.upFolder|↑ Folder
+389|toolbar.fit|Fit
+390|tab.palette|Palette
+391|palette.addBlock|Add block
+392|palette.localManifests|Local manifests
+393|tab.tree|Tree
+394|tab.search|Search
+395|tab.trends|Trends
+396|tab.log|Log
+397|tab.checks|Checks
+398|app.waitBeforeExit|Wait for the operation to finish before exiting
+399|app.draftNotLoaded|Draft not loaded: {0}
+400|app.waitForOperation|Wait for the operation to finish
+401|app.titleOffline| · Offline
+402|app.titleDevice| · Device
+403|app.draftNotSaved|Could not save the session draft: {0}
+404|app.structureOk|The project structure is correct.\nThis is neither a check of the algorithms nor a firmware compilation.
+405|edit.kitMismatch|The project uses {0}, the component needs {1}. Versions of one kit cannot be mixed.
+406|edit.copied|Components copied: {0}, internal links: {1}
+407|edit.rootItem|Root [#0]
+408|edit.moveTitle|Move the selected components with their subtrees
+409|edit.templateKitsMissing|The device lacks the template's exact kits. Choose a compatible template; manifests are under “Options → Device”.
+410|edit.noExactType|The session palette has no exact type {0} / {1}. Import the manifests first.
+411|edit.templateInserted|Template inserted into the project; Ctrl+Z undoes. Nothing was written to the device.
+412|tree.searchPrompt|Component name, type or ID…
+413|tree.item|{0} · {1}\nFolder: {2}
+414|tree.showOnDiagram|Show on the diagram
+415|palette.chooseType|Choose a component type
+416|palette.allKits|All kits
+417|palette.chooseInKit|Choose a component inside a kit
+418|palette.details|{0}\n{1}\nProperties: {2} · configuration: {3}
+419|palette.kits|Kits
+420|palette.inProject| · in project
+421|palette.local| · local
+422|palette.counts|{0} kits · {1} components
+423|menu.options|Options
+424|menu.newProject|New project…
+425|menu.templates|Template library…
+426|menu.exportCsv|Export CSV…
+427|menu.device|Device
+428|menu.manifests|Manifests / import / download…
+429|menu.compare|Compare with the last read…
+430|menu.recovery|Operation journal / check after a failure…
+431|menu.disconnect|Disconnect
+432|menu.canvas|Canvas
+433|menu.zoom100|Zoom 100%
+434|menu.fit|Fit · Home
+435|menu.pinLayout|Pin the on-screen layout in the project
+436|menu.settings|Settings…
+437|menu.help|Help · F1
+438|menu.edit|Edit
+439|menu.copy|Copy · Ctrl+C
+440|menu.paste|Paste · Ctrl+V
+441|menu.duplicate|Duplicate · Ctrl+D
+442|menu.remove|Remove · Del
+443|menu.alignLeft|Align left
+444|menu.alignTop|Align top
+445|menu.distributeH|Distribute horizontally
+446|menu.distributeV|Distribute vertically
+447|menu.highlightSignal|Highlight the signal path
+448|diagram.breadcrumbRoot|Project / Root
+449|diagram.breadcrumb|{0} / {1} · {2} blocks
+450|diagram.spreadLocally|{0} · spread locally: {1}
+451|diagram.layoutOutOfRange|The layout leaves the device coordinate range 0…3060. Move some blocks into folders or rearrange them.
+452|diagram.layoutAlreadyPinned|The layout is already pinned in the project
+453|diagram.layoutPinned|Layout saved in the project. Ctrl+Z undoes; writing to the device happens only via Apply.
+454|settings.title|Editor settings
+455|settings.showGrid|Show the grid
+456|settings.snapGrid|Snap blocks to the 12 px grid
+457|settings.showValues|Show values on blocks
+458|settings.avoidOverlap|Spread overlapping blocks on screen (coordinates are not written)
+459|settings.showZoom|Show the zoom slider in the bar
+460|settings.livePolling|Refresh values of visible components and trends
+461|settings.appearance|Appearance and canvas
+462|settings.theme|Colour theme
+463|settings.interval|Refresh interval, ms
+464|settings.intervalHint|100–60000 ms. For example: 250, 500, 1000. If a read takes longer than the interval, cycles do not overlap.
+465|help.header|Working with the diagram · F1
+466|help.title|Sedona Studio controls
+467|help.text|Block: drag the body. Link: blue dot → green input.\nMiddle mouse button — pan the canvas. Ctrl+wheel — zoom at the cursor.\nHome — fit the diagram. Alt+↑ — parent folder.\nArrows — move by 12 px; Shift+arrows — by 1 px.\nCtrl+D — copy, Delete — remove, Ctrl+Z/Y — history, Ctrl+S — save.\nEsc — cancel a link. Search: the tab on the left, Enter — go.\nOptions → Settings: themes, grid, snapping, values and the refresh interval in ms.\nOptions → Project: template library, import/export and saving the selection.\nOptions → Device: manifests, comparison and the journal after a failure.\nProject changes are sent to the device only via “Apply…”.
+468|workspace.closing|Closing the session after saving the draft: {0}
+469|workspace.tabs|Tabs: {0}
+470|workspace.alreadyConnected|The session is already connected
+471|workspace.switching|Switching session: {0}
+472|workspace.newWindow|Open in a new window
+473|workspace.opening|Opening the session…
+474|workspace.windowNotStarted|The new window did not start; the current session is saved
+475|workspace.windowNotConfirmed|The new window did not confirm its start. The current window stays open.
+476|workspace.openedInNewWindow|The session is open in a new window
+477|workspace.waitBeforeSwitch|Wait for the operation to finish before switching the session
+478|view.notRestored|View not restored: {0}
+479|panel.notInstalled|The panel module is not installed
+480|panel.apiCopy|The module JAR contains a copy of the API: {0}
+481|panel.oneModule|Exactly one panel module is needed, found: {0}
+482|panel.incompatibleApi|Incompatible panel API version: {0}
+483|panel.unavailable|Panel unavailable: {0}
+484|panel.tooLarge|The panel is larger than 256 KiB
+485|panel.bindingLimit|No more than 64 bindings
+486|panel.writeDisabled|Writing from the panel is not enabled in this adapter yet
+487|panel.actionsDisabled|Actions from the panel are not enabled in this adapter yet

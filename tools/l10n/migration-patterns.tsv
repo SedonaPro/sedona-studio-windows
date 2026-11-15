@@ -1,0 +1,487 @@
+1	В сессии отсутствует {0}. Подключитесь к контроллеру для загрузки.	LocalCatalog
+2	нет sys	LocalCatalog
+3	конфликт версий {0}	LocalCatalog
+4	не подходит {0}	LocalCatalog
+5	нет зависимости {0}	LocalCatalog
+6	В текущей сессии отсутствует манифест: {0}	ManifestArchive
+7	Несколько версий кита {0}	TemplateRequirements
+8	Нет исходного кита {0}	TemplateRequirements
+9	Зависимости проверены по локальным манифестам: {0} китов.	TemplateRequirements
+10	Сохранён полный исходный набор китов: зависимости не подтверждены ({0}).	TemplateRequirements
+11	Нет исходной зависимости {0}	TemplateRequirements
+12	Нет локального манифеста {0}	TemplateRequirements
+13	DTD/entity в {0}	TemplateRequirements
+14	Checksum не совпадает: {0}	TemplateRequirements
+15	Не подходит зависимость {0}	TemplateRequirements
+16	локально	SessionStore
+17	ID сессии	SessionStore
+18	Локальная библиотека	SessionStore
+19	Нельзя удалить локальную библиотеку или текущую сессию	SessionStore
+20	Недопустимый путь сессии	SessionStore
+21	Сессия открыта в другом окне. Закройте её перед удалением.	SessionStore
+22	Сессия сейчас открыта	SessionStore
+23	Недопустимая папка архива	SessionStore
+24	Папка: {0}\n\n	SessionStore
+25	Схема контроллера ещё не получена. Подключитесь в этой сессии.\n	SessionStore
+26	\nФайлов XML в собственном кэше: 	SessionStore
+27	Имя сессии 1–120 символов	SessionStore
+28	UDP-порт	SessionStore
+29	Некорректное подтверждение подключения	SessionStore
+30	Некорректный запрос подключения	SessionStore
+31	Подтверждение подключения истекло. Нажмите Подключиться заново.	SessionStore
+32	Сессия уже закрыта	SessionStore
+33	Сессия открыта старой версией. Закройте её в собственном окне.	SessionStore
+34	Пароль слишком длинный	SessionStore
+35	DPAPI: превышено время ожидания	SessionStore
+36	DPAPI: не удалось обработать пароль текущего пользователя Windows	SessionStore
+37	Повреждён ключ защиты паролей: {0}	SessionStore
+38	Сохранённый пароль повреждён	SessionStore
+39	Не удалось обработать сохранённый пароль	SessionStore
+40	Некорректный размер или имя запроса	WorkspaceRequest
+41	Некорректное действие	WorkspaceRequest
+42	Некорректный запрос сохранён: {0}	WorkspaceRequest
+43	Не удалось прочитать	RecoveryStore
+44	\nСнимок результата повреждён: {0}	RecoveryStore
+45	Проверено чтением	RecoveryStore
+46	Требуется проверка устройства	RecoveryStore
+47	Запись не начата по журналу	RecoveryStore
+48	Состояние: {0}\nПопыток: {1} · подтверждённых шагов: {2}\n{3}\n{4}\n{5}	RecoveryStore
+49	Последний шаг без DONE: {0}\n	RecoveryStore
+50	Журнал недоступен или больше 1 MiB	RecoveryStore
+51	Настройки вида повреждены	ViewStateStore
+52	Строка: {0}	ProjectStore
+53	Список: {0}	ProjectStore
+54	Проект больше 4 MiB	ProjectStore
+55	Неизвестный формат проекта	ProjectStore
+56	Комментарий длиннее 4000 символов	ProjectStore
+57	Повтор порта	ProjectStore
+58	Слишком много полей	ProjectStore
+59	Секреты не хранятся в проекте	ProjectStore
+60	Недопустимое значение поля	ProjectStore
+61	Повтор ID	ProjectStore
+62	Опорная точка	ProjectStore
+63	Черновик и резервная копия недоступны; существующие файлы сохранены как .damaged-*	ProjectStore
+64	Нет каталога	Catalog
+65	 · блоки: {0} / связи: {1}	TemplateStore
+66	 · повреждён	TemplateStore
+67	Название: 1–120 символов	TemplateStore
+68	Выберите блоки для шаблона	TemplateStore
+69	Системный компонент не включается в шаблон: {0}	TemplateStore
+70	Неверный точный кит: {0}	TemplateStore
+71	Нет точного кита компонента: {0}	TemplateStore
+72	Файл вне библиотеки	TemplateStore
+73	Папка назначения не найдена	EditorCommands
+74	Несовместимые версии кита {0}	EditorCommands
+75	Вставка выходит за границы 0…3060	EditorCommands
+76	Координаты вне 0…3060	EditorCommands
+77	Нельзя переносить в собственное поддерево	EditorCommands
+78	Нет папки	EditorCommands
+79	Интервал: целое число от 100 до 60000 мс	PollingInterval
+80	Новый проект	Project
+81	Блок не найден	Project
+82	Несовместимые порты	Project
+83	Вход уже подключён	Project
+84	Корень удалить нельзя	Project
+85	Лимит 512 блоков	Project
+86	Не больше 64 опорных точек	Project
+87	Некорректная точка связи	Project
+88	Недопустимое имя: {0}	Project
+89	Координаты: {0}	Project
+90	Повтор имени: {0}	Project
+91	Нет родителя: {0}	Project
+92	Цикл папок: {0}	Project
+93	Повреждённая связь: {0}	Project
+94	Повтор связи	Project
+95	Несколько источников на входе	Project
+96	Удаление	ProjectDiff
+97	Связь	ProjectDiff
+98	Добавление	ProjectDiff
+99	{0} · папка {1}	ProjectDiff
+100	{0} · имя	ProjectDiff
+101	{0} · тип	ProjectDiff
+102	{0} · кит	ProjectDiff
+103	{0} · папка	ProjectDiff
+104	{0} · позиция	ProjectDiff
+105	Изменение	ProjectDiff
+106	Нет корневых блоков шаблона	TemplatePlacement
+107	Нет свободного места для группы. Освободите область или вставьте шаблон в другую папку.	TemplatePlacement
+108	Сначала отключитесь	SoxDeviceSession
+109	Адрес/порт	SoxDeviceSession
+110	Архив больше 8 MiB	SoxDeviceSession
+111	Нет связи с устройством	SoxDeviceSession
+112	Схема изменилась; переподключитесь	SoxDeviceSession
+113	Устройство Sedona	SoxDeviceSession
+114	Лимит чтения 512 блоков	SoxDeviceSession
+115	Нет компонента	SoxDeviceSession
+116	Удалить связь {0}	SoxDeviceSession
+117	Создать {0} : {1}	SoxDeviceSession
+118	Перенос/замена типа существующего блока не поддерживается	SoxDeviceSession
+119	Имя {0} → {1}	SoxDeviceSession
+120	Позиция {0}	SoxDeviceSession
+121	Поле {0}.{1} = {2}	SoxDeviceSession
+122	Добавить связь {0}	SoxDeviceSession
+123	Удалить блок {0}	SoxDeviceSession
+124	Нет точного типа {0} / {1}	SoxDeviceSession
+125	Изменение блоков с учётными данными не поддерживается	SoxDeviceSession
+126	Позиция вне диапазона Sedona 0…3060	SoxDeviceSession
+127	Нет блока связи	SoxDeviceSession
+128	Связи на устройстве изменились; перечитайте устройство	SoxDeviceSession
+129	Исход прежней записи неизвестен; перечитайте устройство	SoxDeviceSession
+130	Имя корня не изменяется этим редактором	SoxDeviceSession
+131	Имя ещё занято на устройстве: {0}. Переименуйте или удалите прежний блок отдельным применением.	SoxDeviceSession
+132	Состав устройства изменился	SoxDeviceSession
+133	Блок изменился: {0}	SoxDeviceSession
+134	Вход подключён связью; сначала удалите её: {0}.{1}	SoxDeviceSession
+135	Значение изменилось: {0}.{1}	SoxDeviceSession
+136	Недопустимая связь	SoxDeviceSession
+137	Удаление системного компонента запрещено в этой версии	SoxDeviceSession
+138	Readback нового блока	SoxDeviceSession
+139	Родитель нового блока отсутствует	SoxDeviceSession
+140	Readback имени	SoxDeviceSession
+141	Позиция изменилась	SoxDeviceSession
+142	Readback позиции	SoxDeviceSession
+143	Значение изменилось перед записью	SoxDeviceSession
+144	Readback значения	SoxDeviceSession
+145	В удаляемой папке остались дочерние блоки	SoxDeviceSession
+146	Операция прервана; часть изменений могла примениться. Автоповтора нет. Журнал: {0}	SoxDeviceSession
+147	Итоговые связи отличаются от плана	SoxDeviceSession
+148	Итоговый блок отличается от плана	SoxDeviceSession
+149	Группы доступа нового блока отличаются от плана: {0}	SoxDeviceSession
+150	Итоговое значение отличается от плана: {0}.{1}	SoxDeviceSession
+151	Удалённый блок всё ещё существует	SoxDeviceSession
+152	Текст отсутствует	ScalarValues
+153	Sedona: допустим только ASCII без нулевого символа	ScalarValues
+154	Максимум {0} символов	ScalarValues
+155	Свежие	SelfTest
+156	Устаревшие	SelfTest
+157	Изменено	SelfTest
+158	копию API	SelfTest
+159	Проверка закрытия фоновой сессии…	SelfTest
+160	Тест: ошибка редактора не должна останавливать опрос	SelfTest
+161	Значение: {0}	SelfTest
+162	Ошибка: {0}	Notices
+163	Операция не завершена	Notices
+164	Онлайн-значения	LiveValues
+165	Видимые компоненты, выбранный блок и тренды. До 16 блоков за цикл; интервал задаётся в мс, большие виды опрашиваются по очереди.	LiveValues
+166	Офлайн	LiveValues
+167	Нажмите: возобновить/приостановить опрос или открыть настройки	LiveValues
+168	Обновить сейчас / возобновить	LiveValues
+169	Приостановить	LiveValues
+170	Настройки обновления…	LiveValues
+171	Сначала подключитесь к устройству	LiveValues
+172	Чтение значений…	LiveValues
+173	Пауза опроса	LiveValues
+174	Секунды с запуска редактора	LiveValues
+175	Выбранные сигналы / UI-отсчёты	LiveValues
+176	Убрать сигнал…	LiveValues
+177	Очистить тренды	LiveValues
+178	Выберите сигнал для удаления	LiveValues
+179	Ожидание значений…	LiveValues
+180	Проект — локальный компонент	LiveValues
+181	Изменено локально — ещё не применено	LiveValues
+182	Офлайн — последнее прочитанное значение	LiveValues
+183	Ошибка чтения — последние данные: {0}	LiveValues
+184	{0} данные · {1} назад	LiveValues
+185	{0} мс	LiveValues
+186	{0} с	LiveValues
+187	Максимум 8 сигналов	LiveValues
+188	Только числовые / Boolean сигналы	LiveValues
+189	Сигнал добавлен; включите опрос для чтения с устройства	LiveValues
+190	Ошибка цикла обновления: {0}	LiveValues
+191	OFFLINE — на экране последние кэшированные значения; переподключитесь вручную	LiveValues
+192	Чтение… · {0} с	LiveValues
+193	Прочитайте устройство для обновления значений	LiveValues
+194	Нет видимых блоков устройства · выберите блок	LiveValues
+195	Повтор чтения · до 10 с · нажмите для управления	LiveValues
+196	Ошибка чтения блока #{0}: {1}; остальные блоки продолжают обновляться	LiveValues
+197	Кэш: {0}	LiveValues
+198	Ошибка чтения · повтор до 10 с · нажмите для управления	LiveValues
+199	Онлайн · {0} · {1} блоков{2}	LiveValues
+200	 · ошибок: {0}	LiveValues
+201	Добавьте сигналы в тренд	LiveValues
+202	CSV сохранён: {0}	LiveValues
+203	Применить весь план	SelfTestDialogs
+204	Требуется	SelfTestDialogs
+205	Манифесты проекта / точные name-checksum	ManifestsDialog
+206	Экспорт ZIP	ManifestsDialog
+207	Импорт XML / ZIP	ManifestsDialog
+208	Скачать с контроллера	ManifestsDialog
+209	При подключении недостающие манифесты загружаются автоматически.	ManifestsDialog
+210	Сначала подключитесь к контроллеру в этой сессии	ManifestsDialog
+211	Загрузка манифестов с контроллера…	ManifestsDialog
+212	Скачано точных манифестов в текущую сессию: {0}	ManifestsDialog
+213	Экспорт манифестов…	ManifestsDialog
+214	Экспортировано манифестов: {0}	ManifestsDialog
+215	Манифесты	ManifestsDialog
+216	Импорт манифестов…	ManifestsDialog
+217	Импортировано манифестов: {0}	ManifestsDialog
+218	Палитра устройства сохраняет его точную схему; новые версии доступны после переподключения.	ManifestsDialog
+219	Предыдущая операция ещё выполняется	DeviceLink
+220	Есть несохранённые изменения. Продолжить без сохранения?	ProjectFiles
+221	При подключении палитра ограничена точной схемой устройства. Для локального каталога отключитесь.	ProjectFiles
+222	Чтение локальных манифестов…	ProjectFiles
+223	Локальная палитра: {0} компонентов; недоступных наборов: {1}	ProjectFiles
+224	Манифест: {0}	ProjectFiles
+225	Пример: сумма сигналов	ProjectFiles
+226	Сначала отключитесь от устройства	ProjectFiles
+227	Черновик должен быть снят с устройства с теми же точными китами	ProjectFiles
+228	Открыт {0}	ProjectFiles
+229	Проект Sedona Studio	ProjectFiles
+230	Проект сохранён: {0}	ProjectFiles
+231	Показывать значения из снимков	ReviewDiagramPane
+232	Синхронная прокрутка	ReviewDiagramPane
+233	Приглушать неизменённые блоки	ReviewDiagramPane
+234	Показывать сохранённые значения	ReviewDiagramPane
+235	Было · последний прочитанный снимок	ReviewDiagramPane
+236	Будет · подтверждаемый проект	ReviewDiagramPane
+237	Корень	ReviewDiagramPane
+238	Вписать шаблон	ReviewDiagramPane
+239	Вписать обе схемы	ReviewDiagramPane
+240	Опции просмотра	ReviewDiagramPane
+241	Опции сравнения	ReviewDiagramPane
+242	Папка	ReviewDiagramPane
+243	+ зелёный — добавлено     − красный — удалено     Δ янтарный — изменено\nПросмотр снимков: без редактирования и без запросов к устройству.	ReviewDiagramPane
+244	Просмотр шаблона: папки, блоки и внутренние связи. Редактирование и подключение отключены.\nЗначения сохранены в шаблоне; вычисление и онлайн-опрос не выполняются.	ReviewDiagramPane
+245	Не удалось показать снимок	ReviewDiagramPane
+246	{0}: компонент отсутствует	InspectorPane
+247	{0}: {1}.{2} [#{3}]\n{4} · {5}\nЗначение: {6}\n{7}	InspectorPane
+248	неизвестный тип	InspectorPane
+249	Источник	InspectorPane
+250	Получатель	InspectorPane
+251	Компонент не найден	InspectorPane
+252	К источнику	InspectorPane
+253	К получателю	InspectorPane
+254	Значения читаются отдельно и могут относиться к разным моментам.	InspectorPane
+255	Диагностика связи	InspectorPane
+256	Удалить связь	InspectorPane
+257	Выбрано: {0} компонентов	InspectorPane
+258	Копировать	InspectorPane
+259	Дублировать со связями	InspectorPane
+260	Удалить выбранные	InspectorPane
+261	Перенести в папку…	InspectorPane
+262	Выберите блок.\n\nДвойной щелчок в палитре — добавить.\nВыход справа → вход слева — связь.\nПеретащите корпус — переместить.\nCtrl+Z / Ctrl+Y — история.\nCtrl+D — дублировать.\nDelete — удалить.\nCtrl+колесо — масштаб.\nСредняя кнопка — полотно.\nHome — вписать, F1 — помощь.	InspectorPane
+263	БЛОК #{0}	InspectorPane
+264	Имя	InspectorPane
+265	Переименовать	InspectorPane
+266	Комментарий к блоку / именованный участок	InspectorPane
+267	Сохранить комментарий	InspectorPane
+268	Проект: 	InspectorPane
+269	Кэш: 	InspectorPane
+270	Изменить	InspectorPane
+271	В тренд	InspectorPane
+272	Связь добавлена в проект	DiagramHost
+273	Нет изменений по выбранному фильтру	ChangeListPane
+274	Поиск по блоку, полю, связи или значению…	ChangeListPane
+275	Все изменения	ChangeListPane
+276	Сбросить	ChangeListPane
+277	Фильтр меняет только список. При применении выполняется весь подтверждённый план.	ChangeListPane
+278	Показано {0} из {1} · добавлено {2} · изменено {3} · удалено {4}	ChangeListPane
+279	{0} · {1}\nБыло: {2}\nБудет: {3}	ChangeListPane
+280	Поиск блока…	PaletteDock
+281	Сессии · независимые проекты и манифесты	SessionsDialog
+282	Выберите сессию. Без галки переключение вкладки; соединение и черновик сохраняются.\nПароли шифруются DPAPI; обычное открытие не подключает устройство.	SessionsDialog
+283	Новая сессия…	SessionsDialog
+284	Название сессии	SessionsDialog
+285	Удалить	SessionsDialog
+286	Удалить сессию «{0}» из списка?\nПроект, пароль и манифесты переместятся в deleted-sessions для восстановления.	SessionsDialog
+287	Сессия перемещена в {0}	SessionsDialog
+288	Манифесты сессии	SessionsDialog
+289	Манифесты · {0}	SessionsDialog
+290	Каждая сессия хранит собственные файлы. Для загрузки откройте её, подключитесь и выберите\nМанифесты → Скачать с контроллера. Недостающие файлы скачиваются при подключении.	SessionsDialog
+291	Открыть папку	SessionsDialog
+292	Папка хранения сессий / выбранной сессии	SessionsDialog
+293	Уже подключены	DeviceConnection
+294	Подключение Sedona / SOX	DeviceConnection
+295	Сохранить пароль (DPAPI текущего пользователя Windows)	DeviceConnection
+296	Сохранённый пароль недоступен; введите его заново	DeviceConnection
+297	Адрес	DeviceConnection
+298	Пользователь	DeviceConnection
+299	Пароль	DeviceConnection
+300	Выберите существующую сессию этого устройства	DeviceConnection
+301	Подтверждённое подключение передано в окно сессии устройства.	DeviceConnection
+302	Подключение и получение манифестов…	DeviceConnection
+303	Подключено · {0} · {1} компонентов · {2} китов	DeviceConnection
+304	Подключение по подтверждённому запросу; чтение программы и манифестов…	DeviceConnection
+305	Тест только loopback13987	DeviceConnection
+306	Вид не сохранён: {0}	DeviceConnection
+307	Нет подключения	DeviceConnection
+308	Чтение устройства…	DeviceConnection
+309	Схема прочитана	DeviceConnection
+310	Дождитесь окончания операции	DeviceConnection
+311	Отключение…	DeviceConnection
+312	Отключено; проект остаётся локально	DeviceConnection
+313	Библиотека шаблонов	TemplateLibraryDialog
+314	Шаблонов нет. Выделите блоки и сохраните их в библиотеку.	TemplateLibraryDialog
+315	Поиск шаблона…	TemplateLibraryDialog
+316	Вставка изменяет локальный проект; запись на устройство — отдельно через «Применить».	TemplateLibraryDialog
+317	Сохранить выделение…	TemplateLibraryDialog
+318	Вставить	TemplateLibraryDialog
+319	Просмотр…	TemplateLibraryDialog
+320	Переименовать…	TemplateLibraryDialog
+321	Импорт…	TemplateLibraryDialog
+322	Экспорт…	TemplateLibraryDialog
+323	{0}\n{1}\nТочные киты для вставки:\n{2}	TemplateLibraryDialog
+324	Просмотр шаблона · {0}	TemplateLibraryDialog
+325	Переименовать шаблон	TemplateLibraryDialog
+326	Меняется только название в библиотеке.	TemplateLibraryDialog
+327	Шаблон переименован. Предыдущая версия сохранена в .bak.	TemplateLibraryDialog
+328	Мой шаблон	TemplateLibraryDialog
+329	Сохранить выделенные блоки	TemplateLibraryDialog
+330	Папки и внутренние связи включаются; внешние связи не сохраняются.	TemplateLibraryDialog
+331	Шаблон сохранён. {0}	TemplateLibraryDialog
+332	Импортировано в библиотеку; манифесты сессии не менялись.	TemplateLibraryDialog
+333	Экспортировано: {0}	TemplateLibraryDialog
+334	Перемещено в архив: {0}	TemplateLibraryDialog
+335	Папка библиотеки: {0}	TemplateLibraryDialog
+336	Шаблон Sedona Studio	TemplateLibraryDialog
+337	Проект	DiagramPane
+338	Связь отменена: отпустите мышь над входом компонента	DiagramPane
+339	{0} · {1}\nПротяните связь к входу	DiagramPane
+340	\nВход связи	DiagramPane
+341	\nНедоступен для входящей связи	DiagramPane
+342	Выберите вход для {0}.{1}	DiagramPane
+343	Дублировать	DiagramPane
+344	\nНет свободного пути: связь показана концами	DiagramPane
+345	Вернуть автотрассировку	DiagramPane
+346	Перейти к источнику	DiagramPane
+347	Перейти к получателю	DiagramPane
+348	Свойства	PanelFeature
+349	Панель	PanelFeature
+350	Сначала прочитайте устройство	DeviceChanges
+351	Изменений устройства нет	DeviceChanges
+352	Применение; журнал: {0}	DeviceChanges
+353	Изменения прочитаны обратно · {0}	DeviceChanges
+354	Сначала прочитайте устройство: для сравнения нужен исходный снимок	DeviceChanges
+355	План записи недоступен: {0}	DeviceChanges
+356	Применение изменений / {0} операций	DeviceChanges
+357	Сравнение с последним чтением · без записи	DeviceChanges
+358	Вызвать App.save после успешного применения	DeviceChanges
+359	Изменения применяются последовательно. При обрыве возможен частичный результат.\nЛокальная копия и журнал сохраняются до записи. Автоповтора нет.	DeviceChanges
+360	Схемы	DeviceChanges
+361	Было → будет	DeviceChanges
+362	План операций	DeviceChanges
+363	Сравнение с последним чтением устройства. Перед записью выполняется повторная проверка.\nЗаметки, изгибы линий и текущие онлайн-значения в список записи не входят.	DeviceChanges
+364	Журнал операций / проверка после сбоя	DeviceChanges
+365	В этой сессии ещё нет записей на устройство.	DeviceChanges
+366	После сбоя: 1. Сохраните журнал. 2. Перечитайте устройство. 3. Сверьте результат с исходным и запрошенным проектами.\nПовторять прежний план автоматически нельзя: часть шагов могла выполниться. Копии открывайте для анализа.	DeviceChanges
+367	Исходный → запрошенный	DeviceChanges
+368	Открыть папку операции	DeviceChanges
+369	Обновить список	DeviceChanges
+370	Исторический план. Не является командой повторной записи.	DeviceChanges
+371	Снимки операции недоступны: {0}	DeviceChanges
+372	Перечитать устройство	DeviceChanges
+373	Журналы этой сессии: {0}	DeviceChanges
+374	Черновик перед перечитыванием сохранён: {0}	DeviceChanges
+375	Закрепить раскладку	StudioApp
+376	Записать экранные координаты в проект текущей папки · Ctrl+Z отменяет · без отправки на устройство	StudioApp
+377	Отменить · Ctrl+Z	StudioApp
+378	Повторить · Ctrl+Y	StudioApp
+379	Управление и горячие клавиши · F1	StudioApp
+380	ОФЛАЙН · схема не исполняется · Sedona Studio / JavaFX	StudioApp
+381	Открыть…	StudioApp
+382	Сохранить	StudioApp
+383	Подключиться…	StudioApp
+384	Прочитать	StudioApp
+385	Применить…	StudioApp
+386	Сессии	StudioApp
+387	Масштаб	StudioApp
+388	↑ Папка	StudioApp
+389	Вписать	StudioApp
+390	Палитра	StudioApp
+391	Добавить блок	StudioApp
+392	Локальные манифесты	StudioApp
+393	Дерево	StudioApp
+394	Поиск	StudioApp
+395	Тренды	StudioApp
+396	Журнал	StudioApp
+397	Проверка	StudioApp
+398	Дождитесь завершения операции перед выходом	StudioApp
+399	Черновик не загружен: {0}	StudioApp
+400	Дождитесь завершения операции	StudioApp
+401	 · Офлайн	StudioApp
+402	 · Устройство	StudioApp
+403	Не удалось сохранить черновик сессии: {0}	StudioApp
+404	Структура проекта корректна.\nЭто не проверка алгоритмов и не компиляция прошивки.	StudioApp
+405	Проект использует {0}, компонент требует {1}. Смешивать версии одного кита нельзя.	EditActions
+406	Скопировано компонентов: {0}, внутренних связей: {1}	EditActions
+407	Корень [#0]	EditActions
+408	Перенести выбранные компоненты вместе с поддеревьями	EditActions
+409	В устройстве отсутствуют точные киты шаблона. Выберите совместимый шаблон; манифесты доступны в «Опциях → Устройство».	EditActions
+410	В палитре сессии нет точного типа {0} / {1}. Сначала импортируйте манифесты.	EditActions
+411	Шаблон вставлен в проект; Ctrl+Z отменяет. На устройство ничего не записано.	EditActions
+412	Имя, тип или ID компонента…	ProjectTree
+413	{0} · {1}\nПапка: {2}	ProjectTree
+414	Показать на схеме	ProjectTree
+415	Выберите тип компонента	PalettePane
+416	Все киты	PalettePane
+417	Выберите компонент внутри кита	PalettePane
+418	{0}\n{1}\nСвойства: {2} · конфигурация: {3}	PalettePane
+419	Киты	PalettePane
+420	 · в проекте	PalettePane
+421	 · локальный	PalettePane
+422	{0} китов · {1} компонентов	PalettePane
+423	Опции	EditorMenus
+424	Новый проект…	EditorMenus
+425	Библиотека шаблонов…	EditorMenus
+426	Экспорт CSV…	EditorMenus
+427	Устройство	EditorMenus
+428	Манифесты / импорт / загрузка…	EditorMenus
+429	Сравнить с последним чтением…	EditorMenus
+430	Журнал операций / проверка после сбоя…	EditorMenus
+431	Отключить	EditorMenus
+432	Холст	EditorMenus
+433	Масштаб 100%	EditorMenus
+434	Вписать · Home	EditorMenus
+435	Закрепить экранную раскладку в проекте	EditorMenus
+436	Настройки…	EditorMenus
+437	Справка · F1	EditorMenus
+438	Редактирование	EditorMenus
+439	Копировать · Ctrl+C	EditorMenus
+440	Вставить · Ctrl+V	EditorMenus
+441	Дублировать · Ctrl+D	EditorMenus
+442	Удалить · Del	EditorMenus
+443	Выровнять слева	EditorMenus
+444	Выровнять сверху	EditorMenus
+445	Распределить по горизонтали	EditorMenus
+446	Распределить по вертикали	EditorMenus
+447	Подсветить путь сигнала	EditorMenus
+448	Проект / Корень	DiagramView
+449	{0} / {1} · {2} блоков	DiagramView
+450	{0} · локально разведено: {1}	DiagramView
+451	Раскладка выходит за диапазон координат устройства 0…3060. Перенесите часть блоков в папки или измените расположение.	DiagramView
+452	Раскладка уже закреплена в проекте	DiagramView
+453	Раскладка сохранена в проекте. Ctrl+Z отменяет; запись на устройство — только через Применить.	DiagramView
+454	Настройки редактора	SettingsDialogs
+455	Показывать сетку	SettingsDialogs
+456	Привязывать блоки к сетке 12 px	SettingsDialogs
+457	Показывать значения на блоках	SettingsDialogs
+458	Разводить перекрывающиеся блоки на экране (без записи координат)	SettingsDialogs
+459	Показывать ползунок масштаба на панели	SettingsDialogs
+460	Обновлять значения видимых компонентов и трендов	SettingsDialogs
+461	Оформление и холст	SettingsDialogs
+462	Цветовая тема	SettingsDialogs
+463	Интервал обновления, мс	SettingsDialogs
+464	100–60000 мс. Например: 250, 500, 1000. Если чтение дольше интервала, циклы не перекрываются.	SettingsDialogs
+465	Работа со схемой · F1	SettingsDialogs
+466	Управление Sedona Studio	SettingsDialogs
+467	Блок: перетащите корпус. Связь: синяя точка → зелёный вход.\nСредняя кнопка мыши — переместить полотно. Ctrl+колесо — масштаб у курсора.\nHome — вписать схему. Alt+↑ — родительская папка.\nСтрелки — сдвиг на 12 px; Shift+стрелки — на 1 px.\nCtrl+D — копия, Delete — удалить, Ctrl+Z/Y — история, Ctrl+S — сохранить.\nEsc — отменить связь. Поиск: вкладка слева, Enter — перейти.\nОпции → Настройки: темы, сетка, привязка, значения и интервал обновления в мс.\nОпции → Проект: библиотека шаблонов, импорт/экспорт и сохранение выделения.\nОпции → Устройство: манифесты, сравнение и журнал после сбоя.\nИзменения проекта отправляются на устройство только через «Применить…».	SettingsDialogs
+468	Закрытие сессии после сохранения черновика: {0}	SessionWorkspace
+469	Вкладки: {0}	SessionWorkspace
+470	Сессия уже подключена	SessionWorkspace
+471	Переключение сессии: {0}	SessionWorkspace
+472	Открыть в новом окне	SessionWorkspace
+473	Открывается сессия…	SessionWorkspace
+474	Новое окно не запустилось; текущая сессия сохранена	SessionWorkspace
+475	Новое окно не подтвердило запуск. Текущее окно оставлено открытым.	SessionWorkspace
+476	Сессия открыта в новом окне	SessionWorkspace
+477	Дождитесь завершения операции перед переключением сессии	SessionWorkspace
+478	Вид не восстановлен: {0}	SavedView
+479	Модуль панели не установлен	PanelModules
+480	JAR модуля содержит копию API: {0}	PanelModules
+481	Нужен один модуль панели, найдено: {0}	PanelModules
+482	Несовместимая версия API панели: {0}	PanelModules
+483	Панель недоступна: {0}	PanelModules
+484	Панель больше 256 KiB	PanelDocumentStore
+485	Не больше 64 привязок	PanelBridge
+486	Запись с панели в этом адаптере ещё не включена	PanelBridge
+487	Actions с панели в этом адаптере ещё не включены	PanelBridge

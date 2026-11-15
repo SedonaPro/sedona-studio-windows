@@ -1,0 +1,22 @@
+[
+  {
+    "file": "javafx-base-17.0.12-win.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/openjfx/javafx-base/17.0.12/javafx-base-17.0.12-win.jar",
+    "sha256": "8751ede25faa97d01a32644fd5ea57922f8740aa5001652fcd57b24fee19cffb"
+  },
+  {
+    "file": "javafx-graphics-17.0.12-win.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/openjfx/javafx-graphics/17.0.12/javafx-graphics-17.0.12-win.jar",
+    "sha256": "9ff33b9b524c5451393dbf271ee533dec0aa956d173cc19fcffc6bfe09625233"
+  },
+  {
+    "file": "javafx-controls-17.0.12-win.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/openjfx/javafx-controls/17.0.12/javafx-controls-17.0.12-win.jar",
+    "sha256": "2705bc4f31823abaa655d1bf464fa1f01f9f3b1e82b5ded1d7b023bea9bb2d43"
+  },
+  {
+    "file": "javafx-swing-17.0.12-win.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/openjfx/javafx-swing/17.0.12/javafx-swing-17.0.12-win.jar",
+    "sha256": "17b6212f935b6762b006564794b492f06a2c6ac4305101e0a8d8765c01715671"
+  }
+]

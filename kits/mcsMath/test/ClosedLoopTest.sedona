@@ -1,0 +1,79 @@
+class ClosedLoopTest extends Test
+{
+  static inline AdvancedPid pid
+  static inline ThermalPlant plant
+
+  static bool near(float a, float b)
+  {
+    float d = a - b
+    return d < 0.1f && d > -0.1f
+  }
+
+  static void test()
+  {
+    plant.reset := true
+    plant.step(0.1f)
+    assert(plant.ok && near(plant.out, 20.0f))
+    plant.reset := false
+    plant.command := 100.0f
+    plant.step(0.1f)
+    assert(plant.out > 20.0f && plant.out < 21.0f)
+    plant.tau := 0.0f
+    plant.command := 200.0f
+    plant.step(0.1f)
+    assert(near(plant.out, 70.0f))
+    plant.command := -10.0f
+    plant.step(0.1f)
+    assert(near(plant.out, 20.0f))
+    plant.tau := -1.0f
+    plant.step(0.1f)
+    assert(!plant.ok && near(plant.out, 20.0f))
+    plant.tau := 20.0f
+    pid.sp := 40.0f
+    pid.kp := 4.0f
+    pid.ti := 20.0f
+    // Uneven actual intervals: the physical model and integrator use the same elapsed dt.
+    for (int i=0; i<4000; ++i)
+    {
+      float dt = (i % 2) == 0 ? 0.05f : 0.15f
+      pid.pv := plant.out
+      pid.step(dt)
+      plant.command := pid.out
+      plant.step(dt)
+    }
+    assert(pid.ok && plant.ok)
+    assert(near(plant.out, 40.0f))
+    assert(near(pid.out, 40.0f))
+    // A load disturbance changes the required actuator value while PV returns to setpoint.
+    plant.disturbance := -5.0f
+    for (int i=0; i<4000; ++i)
+    {
+      pid.pv := plant.out
+      pid.step(0.1f)
+      plant.command := pid.out
+      plant.step(0.1f)
+    }
+    assert(near(plant.out, 40.0f))
+    assert(near(pid.out, 50.0f))
+    // No windup during an unreachable setpoint; recovery when it returns to range.
+    pid.sp := 200.0f
+    for (int i=0; i<4000; ++i)
+    {
+      pid.pv := plant.out
+      pid.step(0.1f)
+      plant.command := pid.out
+      plant.step(0.1f)
+    }
+    assert(pid.limited && near(pid.out, 100.0f))
+    pid.sp := 40.0f
+    for (int i=0; i<4000; ++i)
+    {
+      pid.pv := plant.out
+      pid.step(0.1f)
+      plant.command := pid.out
+      plant.step(0.1f)
+    }
+    assert(near(plant.out, 40.0f))
+    assert(near(pid.out, 50.0f))
+  }
+}
